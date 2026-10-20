@@ -1,20 +1,24 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package com.mycompany.tutorial;
-
-/**
- *
- * @author USER
- */
+import java.util.Scanner;
 public class Tutorial3_q5 {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+       public static void main(String[] args) {
+           Scanner in=new Scanner(System.in);
+           System.out.print("Enter the year:");
+          if(!in.hasNextInt()){
+              System.out.println("Please enter the whole year.");
+          } 
+          else{
+          int year=in.nextInt();
+          if(year%4==0&&year%10!=0){
+              System.out.println(year+" is a leap year.");}
+              
+          else if(year%400==0){
+              System.out.println(year+" is a leap year.");
+          } 
+          else{
+              System.out.println(year+" is not leap year");}
+          }
+       }
     
 }
